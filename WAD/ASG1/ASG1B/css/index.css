@@ -14,7 +14,7 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 20px;
 }
 
 :root {
@@ -99,4 +99,16 @@ body, html {
     text-align: center;
     margin-bottom: 30px;
     font-size: 14px;
+}
+
+.w-70 {
+    width : 70%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.input {
+    font-size: 16px;
 }

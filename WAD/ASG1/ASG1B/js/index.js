@@ -18,33 +18,18 @@ function setPrimitives() {
     })
 }
 
-// Remove highlights from the input elements
-function normalizeInput(elements) {
-    for(i in elements) {
-        i.style.borderColor = colors.borderColor;
-    }
-}
-
-// hight light input fields
-function highlightInput(elements) {
-    for(i in elements) {
-        i.style.borderColor = colors.dangerColor;
-    }
-}
 
 function validate() {
     let form = document.forms["log_in"];
     console.log(form);
     let usernameInput = form.elements['username'];
     let passwordInput = form.elements['password'];
-    // console.log(usernameInput.value, passwordInput.value);
-    // if(usernameInput.value == auth.username && passwordInput.value == auth.password) {
-    //     window.location.href('./succes.html');
-    // }
-    // else {
-    //     let elements = [usernameInput, passwordInput];
-    // }
-    highlightInput([usernameInput, passwordInput]);
+    if(usernameInput.value == auth.username && passwordInput.value == auth.password) {
+        window.location.href = "./success.html";
+    }
+    else {
+        showHightlight();
+    }
 }
 
 // Show errors
@@ -52,6 +37,7 @@ function showHightlight() {
     let textHightlight = document.querySelector("#hightlight-error");
     textHightlight.innerHTML = "Check Credentials";
     textHightlight.style.color = colors.dangerColor;
+    textHightlight.style.fontWeight = '900';
 }
 
 // Hide error text
@@ -59,6 +45,7 @@ function hideHiglight() {
     let textHightlight = document.querySelector("#hightlight-error");
     textHightlight.innerHTML = "Log in to explore";
     textHightlight.style.color = colors.textColor;
+    textHightlight.style.fontWeight = '';
 };
 
 // Submit the form 
