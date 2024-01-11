@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Data Page</title>
+    <title>Userdisplay</title>
   </head>
 
   <body>
     <h1>User Data</h1>
-    
     <p><strong>Name:</strong> <span id="display_name"></span></p>
     <p><strong>Username:</strong> <span id="display_username"></span></p>
     <p><strong>Password:</strong> <span id="display_password"></span></p>
@@ -21,16 +21,12 @@
     <p><strong>Pincode:</strong> <span id="display_pincode"></span></p>
     <p><strong>State:</strong> <span id="display_state"></span></p>
     <p><strong>Hobbies:</strong> <span id="display_hobbies"></span></p>
-    
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        // Retrieve data from localStorage
         const storedData = localStorage.getItem('userData');
-
         if (storedData) {
           const userData = JSON.parse(storedData);
-
-          // Display the data on the new page
           displayUserData(userData);
         } else {
           console.error('No user data found in localStorage.');
@@ -38,7 +34,6 @@
       });
 
       function displayUserData(userData) {
-        // Access HTML elements on the new page and populate them with userData
         document.getElementById('display_name').textContent = userData.Name;
         document.getElementById('display_username').textContent = userData.Username;
         document.getElementById('display_password').textContent = userData.Password;
@@ -49,9 +44,10 @@
         document.getElementById('display_address').textContent = userData.Address;
         document.getElementById('display_city').textContent = userData.city;
         document.getElementById('display_pincode').textContent = userData.pincode;
-        document.getElementById('display_state').textContent = userData.state;
+        document.getElementById('display_state').textContent = userData.State;
         document.getElementById('display_hobbies').textContent = userData.hobbies;
       }
     </script>
+
   </body>
 </html>

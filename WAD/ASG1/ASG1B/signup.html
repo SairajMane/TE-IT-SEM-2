@@ -114,12 +114,25 @@
 
           <div class="input-parent">
             <p class="input-head-label">City</p>
-            <input
-              type="text"
+            <select
+              type=""
               class="w-100 form-input long-input-btn"
               name="city"
               required
-            />
+            >
+              <option value="" selected disabled>Select city</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Pune">Pune</option>
+              <option value="Nagpur">Nagpur</option>
+              <option value="Aurangabad">Aurangabad</option>
+              <option value="Thane">Thane</option>
+              <option value="Nashik">Nashik</option>
+              <option value="Kolhapur">Kolhapur</option>
+              <option value="Satara">Satara</option>
+              <option value="Mira-Bhayandar">Mira-Bhayandar</option>
+              <option value="Raigad">Raigad</option>
+              <option value="Wardha">Wardha</option>
+            </select>
           </div>
 
           <div class="input-parent">
@@ -137,8 +150,6 @@
             <p class="input-head-label">State</p>
             <select
               type=""
-              maxlength="6"
-              max="6"
               class="w-100 form-input long-input-btn"
               name="State"
               required
@@ -201,7 +212,7 @@
           </div>
 
           <div class="button-parent">
-            <button class="long-btn w-100" id="submit">Sign Up</button>
+            <button class="long-btn w-100" id="submitted">Sign Up</button>
           </div>
 
           <div class="centered-subtext">
