@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
-</head>
-<body>
-    Success
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in Sucess</title>
+  </head>
+  <body>
+    <h1>User Data</h1>
+    Logged in as 
+    <p id="username"></p>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Retrieve data from localStorage
+        const storedData = localStorage.getItem('userData');
+
+        if (storedData) {
+          const userData = JSON.parse(storedData);
+
+          // Display the data on the new page
+          displayUserData(userData);
+        } else {
+          console.error('No user data found in localStorage.');
+        }
+      });
+
+      function displayUserData(userData) {
+        document.querySelector('#username').innerHTML = userData.username;
+      }
+    </script>
+  </body>
 </html>
